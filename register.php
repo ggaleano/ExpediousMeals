@@ -30,9 +30,9 @@ die($msg_reg_email);
   
 	$activ_key = sha1(mt_rand(10000,99999).time().$email);
     $activ_status = 1;
-$email1=NULL;
+    //$email1=NULL;
 	$hashed_password = crypt($password,'987654321');   //Hash used to suppress  PHP notice
-	$query="insert into ".$table_name."(username,password,email,activ_status,activ_key) values ('$username','$hashed_password','$email1','$activ_status','$activ_key')";
+	$query="insert into ".$table_name."(username,password,activ_status,activ_key) values ('$username','$hashed_password','$activ_status','$activ_key')";
 //$query="insert into ".$table_name."(username,password,activ_status,activ_key) values ('$username','$hashed_password','$activ_status','$activ_key')";
 	
 	if (!mysqli_query($con,$query))

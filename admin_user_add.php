@@ -49,7 +49,22 @@ if (!isset($_SESSION['admin'])) {
             <input type="text" id="inputEmail" name="email" placeholder="Email">
         </div>
         <div class="form-group">
-            <input type="text" id="inputuserid" name="username" placeholder="Client's Name">
+            <input type="text" id="inputfname" name="fname" placeholder="Client's First Name">
+        </div>
+        <div class="form-group">
+            <input type="text" id="inputlname" name="lname" placeholder="Client's Last Name">
+        </div>
+        
+        <div class="form-group">
+            <input type="text" id="inputgender" name="gender" placeholder="Gender">
+        </div>  
+                 
+        <div class="form-group">
+            <input type="text" id="inputphone" name="phone" placeholder="Phone Number">
+        </div>         
+                 
+        <div class="form-group">
+            <input type="text" id="inputaddress" name="address" placeholder="Client's address">
         </div>
 
 <button type="submit"

@@ -1,9 +1,20 @@
 <?php
-	//Database configuration
-$server='us-cdbr-iron-east-03.cleardb.net';
-$db_user='bf478180bec9f1';
-$db_pwd='1a582896';
-$db_name='ad_24323cc4e82a822';
+//	Database configuration
+
+
+//$server='us-cdbr-iron-east-03.cleardb.net';
+//$db_user='bf478180bec9f1';
+//$db_pwd='1a582896';
+//$db_name='ad_24323cc4e82a822';
+
+
+$server='localhost';
+$db_user='root';
+$db_pwd='root';
+$db_name='Principals';
+
+
+
 $table_name='users';
 $table_name_social='users_social';
 //email configuraion

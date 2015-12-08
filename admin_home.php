@@ -141,6 +141,8 @@ if (!isset($_SESSION['admin'])) {
             <div class="row">
                 <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
                     <div class="analytics box">
+<!--                        change this actual link to display database-->
+                        <a href="view.php">
                         <div class="boxchart-overlay green">
                             <div class="boxchart">
                                 <canvas width="64" height="30"
@@ -149,10 +151,13 @@ if (!isset($_SESSION['admin'])) {
                         </div>
                         <span class="title">Volunteers</span>
                         <span class="value"><?php echo $activecount; ?></span>
+
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6 col-xs-6 col-xxs-12">
                     <div class="analytics box">
+<!--                        change this actual link to display database-->
+                        <a href="http://yahoo.com">
                         <div class="boxchart-overlay grey">
                             <div class="boxchart">
                                 <canvas width="64" height="30"
@@ -200,5 +205,18 @@ if (!isset($_SESSION['admin'])) {
         $("#wrapper").toggleClass("active");
     });
 </script>
+<script>
+       $('.boxchart-overlay green').click(function(){
+ window.location = $(this).find("a").attr("href"); 
+  return false;
+           
+</script>
+    <script>
+       $('.boxchart-overlay grey').click(function(){
+ window.location = $(this).find("a").attr("href"); 
+  return false;
+           
+</script>  
+    
 </body>
 </html>

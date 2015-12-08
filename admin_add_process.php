@@ -10,6 +10,13 @@
 //prevent sql injection
 $username=mysqli_real_escape_string($con,$_POST["username"]);
 $email=mysqli_real_escape_string($con,$_POST["email"]);
+$fname=mysqli_real_escape_string($con,$_POST["fname"]);
+$lname=mysqli_real_escape_string($con,$_POST["lname"]);
+$gender=mysqli_real_escape_string($con,$_POST["gender"]);
+$phone=mysqli_real_escape_string($con,$_POST["phone"]);
+$address=mysqli_real_escape_string($con,$_POST["address"]);
+
+
 	
 //check if user exist already
 $query="select * from ".$table_name." where username='$username'";
@@ -26,14 +33,16 @@ if (mysqli_num_rows($result))
 die($msg_reg_email);
 
   }
-  
+
  
   $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
    $password=substr(str_shuffle($chars),0,8);
+
+
 	
 	$activ_key = sha1(mt_rand(10000,99999).time().$email);
 	$hashed_password = crypt($password); 
-	$query="insert into ".$table_name."(username,password,email,activ_key) values ('$username','$hashed_password','$email','$activ_key')";
+	$query="insert into ".$table_name."(email,fname,lname,activ_key,gender,phone,address) values ('$email','$fname','$lname','$activ_key','$gender','$phone','$address')";
 	
 	if (!mysqli_query($con,$query))
   {
